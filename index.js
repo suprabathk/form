@@ -1,5 +1,6 @@
 let userForm = document.getElementById("user_form");
-let userEntry = [];
+let userEntryUNPARSED = localStorage.getItem('userEntries');
+let userEntry = userEntryUNPARSED ? JSON.parse(userEntryUNPARSED) : [];
 let errors = [];
 
 const retrieveEntries = () => {
